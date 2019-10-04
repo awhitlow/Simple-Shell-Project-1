@@ -58,7 +58,7 @@ if (pid < 0) {
 
 else if (pid == 0) {
   printf("This is the child %d\n", pid);
-	execvp(arguments[0], arguments);	
+	execve(arguments[0], arguments, environ);	
 }
 		
 // 3. The parent process should wait for the child to complete	
